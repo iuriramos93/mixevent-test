@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ClientLayout } from '@/components/client-layout';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <head>
-<link rel="icon" type="image/png" href="public/favicon.png" />
-      </head>
+      <Head>
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       <body className={inter.className}>
         <ClientLayout>{children}</ClientLayout>
       </body>
